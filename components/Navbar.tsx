@@ -1,12 +1,15 @@
+import { Bell, CircleUserRound } from "lucide-react";
 import React from "react";
 import { IoNotifications } from "react-icons/io5";
 
 const Navbar = () =>
-    <nav className="w-[90%] h-16 fixed top-0 bg-white shadow-md flex justify-between items-center px-6">
+    <nav className="h-16 sticky top-0 bg-white shadow-md flex justify-between items-center px-6">
+        <div className="left">
         <h1 className="text-lg font-semibold">Welcome to Subscription Tracker</h1>
-        <div>
-            {/* profile photo */}
-            <IoNotifications />
+        </div>
+        <div className="flex gap-4 align-middle text-xl">
+            <CircleUserRound />
+            <Bell />
         </div>
     </nav>;
 

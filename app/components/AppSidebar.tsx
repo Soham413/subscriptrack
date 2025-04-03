@@ -6,6 +6,7 @@ import React from 'react'
 import { LuCircleUser } from 'react-icons/lu'
 import { MdOutlineSubscriptions } from 'react-icons/md'
 import { RiDashboardHorizontalLine } from 'react-icons/ri'
+import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarHeader } from "@/components/sidebar"
 
 const AppSidebar = () => {
     const options = [
@@ -28,12 +29,12 @@ const AppSidebar = () => {
     const path = usePathname()
     const isActive = (route: string) => path.includes(route)
     return (
-        <div className='bg-white h-screen w-[10%]'>
-            <div className="logo p-4 text-[20px] font-bold"><i>SubsTrack</i></div>
-            <div className='px-3 pb-3 flex flex-col gap-4 text-sm'>
+        <div className='bg-white h-screen w-[15%]'>
+            <div className="logo p-4 text-center text-[20px] font-bold"><i>SubsTrack</i></div>
+            <div className='px-3 pb-3 flex flex-col gap-3 text-sm'>
                 {options.map((item, i) => {
                     const active = isActive(item.url);
-                    return <Link href={item.url} key={i} className={cn('flex gap-2 px-2 py-1 items-center', active ? 'bg-blue-950 text-white' : 'hover:bg-[#c8d7ff] hover:text-blue-950')}>
+                    return <Link href={item.url} key={i} className={cn('flex gap-2 px-2 py-1 items-center rounded-sm', active ? 'bg-[#222eff] text-white' : 'hover:bg-[#c8d7ff] hover:text-[#222eff]')}>
                                 {item.icon}
                                 {item.label}
                            </Link>
@@ -41,6 +42,20 @@ const AppSidebar = () => {
             </div>
 
         </div>
+        // <Sidebar>
+        //     {/* <SidebarHeader /> */}
+        //     <div className="logo p-4 text-[20px] font-bold"><i>SubsTrack</i></div>
+        //     <SidebarContent>
+        //         {options.map((item, i) => {
+        //             const active = isActive(item.url);
+        //             return <Link href={item.url} key={i} className={cn('flex gap-2 px-2 py-1 items-center', active ? 'bg-[#222eff] text-white' : 'hover:bg-[#c8d7ff] hover:text-[#222eff]')}>
+        //                 {item.icon}
+        //                 {item.label}
+        //             </Link>
+        //         })}
+        //     </SidebarContent>
+        //     <SidebarFooter />
+        // </Sidebar>
     )
 }
 
