@@ -4,12 +4,12 @@ import { cn } from '@/lib/utils'
 import Image, { StaticImageData } from 'next/image';
 import { ChevronRight } from 'lucide-react';
 
-const RenewCard = ({classes, title, price, daysLeft, logo}: {classes: string, title: string, price: number, daysLeft: number, logo: StaticImageData}) => {
+const RenewCard = ({classes, title, price, daysLeft, logo}: {classes: string, title: string, price: number, daysLeft: number, logo: string}) => {
     return (
         <Card className={cn('shadow-md', classes)}>
             <CardHeader className='p-0 flex justify-between'>
                 <div>
-                    <Image src={logo.src} width={30} height={30} alt={title}/>{title}
+                    <Image src={logo} width={30} height={30} alt={title}/>{title}
                 </div>
                 <button className='rounded-full cursor-pointer bg-sky-100'><ChevronRight /></button>
             </CardHeader>

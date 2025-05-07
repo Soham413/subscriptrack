@@ -50,3 +50,25 @@ export const spendingData = {
         { name: "YouTube", y: 500 },
     ]
 };
+
+export const subsCategory = [
+    {name: 'Sports', value: 'sports'},
+    {name: 'Entertainment', value: 'entertainment'},
+    {name: 'News', value: 'news'},
+    {name: 'Lifestyle', value: 'lifestyle'},
+    {name: 'Technology', value: 'technology'},
+    {name: 'Politics', value: 'politics'},
+    {name: 'Fashion', value: 'fashion'},
+    {name: 'Finance', value: 'finance'},
+    {name: 'Education', value: 'education'},
+    {name: 'Other', value: 'other'},
+]
+
+export const subsFrequency = [
+    {name: 'Daily', value: 'daily'},
+    {name: 'Weekly', value: 'weekly'},
+    {name: 'Monthly', value: 'monthly'},
+    {name: 'Quarterly', value: 'quarterly'},
+    {name: 'Yearly', value: 'yearly'},
+]
+

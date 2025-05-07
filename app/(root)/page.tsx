@@ -1,8 +1,5 @@
-import { redirect } from 'next/navigation'
 import React from 'react'
-
-const page = () => {
-  redirect('/dashboard')
-}
+import { IsLoggedIn } from './IsLoggedIn'
+const page = () => <IsLoggedIn />
 
 export default page
