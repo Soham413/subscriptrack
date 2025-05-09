@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button"
 import { Calendar } from "@/components/ui/calendar"
 import {
     Popover,
-    PopoverContent,
     PopoverTrigger,
 } from "@/components/ui/popover"
 import { Controller } from 'react-hook-form'
@@ -26,7 +25,7 @@ type AuthDatePickerProps = {
     calculatedDate?: Date;
 }
 
-const DatePicker = ({ title, id, className, validation, control, error, frequency, setValue, calculatedDate }: AuthDatePickerProps) => {
+const DatePicker = ({ title, id, className, validation, control, error, calculatedDate }: AuthDatePickerProps) => {
     // const [date, setDate] = React.useState<Date>()
     return (
         <div className='flex flex-col gap-1 text-sm'>

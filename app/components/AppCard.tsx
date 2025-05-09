@@ -2,7 +2,6 @@ import React from 'react'
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { cn } from '@/lib/utils'
 import CountUp from 'react-countup';
-import { StaticImageData } from 'next/image';
 import { IconType } from 'react-icons';
 import { TrendingDown, TrendingUp } from 'lucide-react';
 

@@ -1,10 +1,9 @@
 'use client'
 import { jwtDecode } from 'jwt-decode';
-import { redirect, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 import Spinner from '../components/Spinner';
 import toast from 'react-hot-toast';
-import { resolve } from 'path';
 
 export const IsLoggedIn = () => {
     const router = useRouter()
@@ -25,7 +24,7 @@ export const IsLoggedIn = () => {
         }
         else{
             toast.error('Session expired heading towards Sign in')
-            const promise = new Promise((resolve) => setTimeout(() => resolve(''), 4000))
+            // const promise = new Promise((resolve) => setTimeout(() => resolve(''), 4000))
             router.replace('/sign-in')
         }
         setLoading(false)

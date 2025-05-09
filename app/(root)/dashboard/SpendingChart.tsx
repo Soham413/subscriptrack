@@ -1,17 +1,15 @@
 import { spendingData } from '@/lib/dummyData';
-import HighchartsReact from 'highcharts-react-official';
-import Highcharts from 'highcharts'
 import React, { useState } from 'react'
 import Chart from '@/graphs/Chart';
-import { useSidebar } from '@/components/sidebar';
+// import { useSidebar } from '@/components/sidebar';
 import { cn } from '@/lib/utils';
 
-const SpendingChart = ({ spendingAnalysis, loading }: { spendingAnalysis: typeof spendingData, loading: boolean }) => {
+const SpendingChart = ({ spendingAnalysis }: { spendingAnalysis: typeof spendingData, loading: boolean }) => {
     const [selectedPeriod, setSelectedPeriod] = useState('currentMonth')
     const chartData = {
         series: [{ name: "Spending", data: spendingAnalysis?.[selectedPeriod as keyof typeof spendingData] }]
     }
-    const { open } = useSidebar()
+    // const { open } = useSidebar()
     return (
         <div className={cn('bg-white rounded-xl p-2 lg:w-1/2')}>
             <div className="flex mb-4 h-[10%] justify-between">

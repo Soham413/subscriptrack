@@ -14,7 +14,7 @@ const ProfileForm = ({ user, setEditInfo, onClose }: { user: userType, setEditIn
         register,
         handleSubmit,
         formState: { errors },
-        watch
+        // watch
     } = useForm({
         defaultValues: {
             name: user.name || "",

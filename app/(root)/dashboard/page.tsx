@@ -5,9 +5,8 @@ import React, { useEffect, useState } from 'react'
 
 import RenewCard from '@/app/components/RenewCard';
 import Chart from '@/graphs/Chart';
-import { categoryComparison, section1Content, section2Content, spendingData } from '@/lib/dummyData';
+import { section1Content, spendingData } from '@/lib/dummyData';
 import SpendingChart from './SpendingChart';
-import { json } from 'stream/consumers';
 import Spinner from '@/app/components/Spinner';
 import toast from 'react-hot-toast';
 import { useDispatch } from 'react-redux';
@@ -85,7 +84,7 @@ const page = () => {
           {upcomingRenewals.length > 0 && <><p className='font-semibold text-xl my-3'>Upcoming renewal plans</p>
             <div className="section2 w-full flex gap-3 flex-wrap max-sm:flex-col">
               {upcomingRenewals.map((item, i) => (
-                <RenewCard key={i} classes='p-4 w-1/3 max-sm:w-[100%] max-md:w-[48%] lg:w-[32.5%]' title={item.name} price={item.price} daysLeft={item.daysLeft || 0} logo={item.subLogo} />
+                <RenewCard key={i} classes='p-4 w-1/3 max-sm:w-[100%] max-md:w-[48%] lg:w-[32.5%]' subscription={item} />
               ))}
             </div></>}
           <p className='font-semibold text-xl my-3'>Statistics</p>

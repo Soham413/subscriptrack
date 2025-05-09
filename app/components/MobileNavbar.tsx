@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger, SheetFooter, SheetClose } from '@/components/ui/sheet'
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, } from '@/components/ui/sheet'
 import { Button } from '@/components/ui/button'
 import { RiDashboardHorizontalLine } from 'react-icons/ri'
 import { MdOutlineSubscriptions } from 'react-icons/md'

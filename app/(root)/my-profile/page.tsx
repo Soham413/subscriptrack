@@ -1,12 +1,12 @@
 'use client'
-import { getUserDetails } from '@/lib/fetchUser'
-import { Pencil, UserCircle } from 'lucide-react'
+// import { getUserDetails } from '@/lib/fetchUser'
+// import { Pencil, UserCircle } from 'lucide-react'
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
-import toast from 'react-hot-toast'
+import React from 'react'
+// import toast from 'react-hot-toast'
 import humanInShirt from '@/public/human-in-shirt-2.png'
-import ProfileForm from './ProfileForm'
-import { strict } from 'assert'
+// import ProfileForm from './ProfileForm'
+// import { strict } from 'assert'
 
 export type userType = {
   name?: string;
@@ -18,8 +18,8 @@ export type userType = {
   updatedAt?: string;
 }
 const page = () => {
-  const [editMode, setEditMode] = useState(false)
-  const [userInfo, setUserInfo] = useState<userType>({})
+//   const [editMode, setEditMode] = useState(false)
+  // const [userInfo, setUserInfo] = useState<userType>({})
   
   return (
     <div className='rounded-md p-4 bg-white'>
@@ -31,8 +31,8 @@ const page = () => {
           {/* <UserCircle /> */}
           <Image src={humanInShirt} alt='Human in shirt' width={400} height={500} />
         </div>
-        {Object.keys(userInfo).length !== 0 && <div className="right w-1/2">
-          {/* {!editMode ? <>
+        {/* {Object.keys(userInfo).length !== 0 && <div className="right w-1/2">
+          {!editMode ? <>
             <label className="mb-1">Name</label>
             <p className='text-stone-500 mb-3'>{userInfo.name}</p>
             <label className="mb-1">Email</label>
@@ -44,8 +44,8 @@ const page = () => {
           </> : 
           <>
             <ProfileForm user={userInfo} setEditInfo={setEditMode} onClose={onClose}/>
-          </>} */}
-        </div>}
+          </>}
+        </div>} */}
       </div>
     </div>
   )

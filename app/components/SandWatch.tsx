@@ -2,7 +2,6 @@
 import { cn } from '@/lib/utils'
 import React from 'react'
 import { Hourglass } from 'react-loader-spinner'
-import { twMerge } from 'tailwind-merge'
 
 type LoadingProps = {
     width?: number,

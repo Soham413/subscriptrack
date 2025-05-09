@@ -9,7 +9,7 @@ import {
     DialogTrigger,
 } from "@/components/ui/dialog"
 import { DialogClose } from '@radix-ui/react-dialog'
-import { CalendarPlus, ImageUp, Plus, Upload } from 'lucide-react'
+import { CalendarPlus, Plus } from 'lucide-react'
 import CustomInput from '@/app/components/CustomInput'
 import SelectDropdown from '@/app/components/SelectDropdown'
 import { subsCategory, subsFrequency } from '@/lib/dummyData'

@@ -1,4 +1,4 @@
-import { HeaderType, subscriptionType } from "@/types/subsciption";
+// import { HeaderType, subscriptionType } from "@/types/subsciption";
 import apiClient from "./service";
 
 const fileHeader = {

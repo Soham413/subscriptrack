@@ -2,13 +2,11 @@ import React, { useState } from 'react'
 import {
     Dialog,
     DialogContent,
-    DialogDescription,
     DialogHeader,
     DialogTitle,
-    DialogTrigger,
 } from "@/components/ui/dialog"
 import { DialogClose } from '@radix-ui/react-dialog'
-import humanInShirt from '@/public/human-in-shirt-2.png'
+// import humanInShirt from '@/public/human-in-shirt-2.png'
 import defaultUserLogo from "@/public/user-logo-default.png"
 import Image from 'next/image'
 import { useSelector } from 'react-redux'

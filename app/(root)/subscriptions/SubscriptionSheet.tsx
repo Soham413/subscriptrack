@@ -1,10 +1,10 @@
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from '@/components/ui/sheet'
+import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
 import { addPayment } from '@/lib/fetchPayments'
 import { updateSubscription } from '@/lib/fetchSubscription'
 import { subscriptionResponseType } from '@/types/subsciption'
-import { Delete, DeleteIcon, Trash2 } from 'lucide-react'
+import { Trash2 } from 'lucide-react'
 import Image from 'next/image'
-import React, { Dispatch } from 'react'
+import React from 'react'
 import toast from 'react-hot-toast'
 
 const SubscriptionSheet = ({ open, setOpen, subscriptionInfo }: { open: boolean, setOpen: any, subscriptionInfo: subscriptionResponseType }) => {
@@ -22,7 +22,13 @@ const SubscriptionSheet = ({ open, setOpen, subscriptionInfo }: { open: boolean,
         renewalDate: updateResponse.data.renewalDate
       }
       const response = await addPayment(subscriptionInfo._id, paymentInfo)
-      response.success ? toast.success('Subscription renewed successfully') : toast.error(response.message || 'Payment is unsuccessful')
+      if (response.success) {
+        toast.success('Subscription renewed successfully')
+      }
+      else {
+        toast.error(response.message || 'Payment is unsuccessful')
+      }
+
     }
     else toast.error(updateResponse.message || 'Subscription not renewed')
   }

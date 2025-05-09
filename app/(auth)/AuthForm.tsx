@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import authBg from '@/public/sign_up_image.jpg'
 import Image from 'next/image'
-import { useForm, SubmitHandler } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 import Link from 'next/link'
 import { Eye, EyeOff } from 'lucide-react'
 import { signIn, signUp } from '@/lib/fetchUser'

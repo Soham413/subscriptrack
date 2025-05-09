@@ -30,7 +30,7 @@ const PageWrapper = ({ children }: { children: React.ReactNode }) => {
         }
         else{
             toast.error('Session expired heading towards Sign in')
-            const promise = new Promise((resolve) => setTimeout(() => resolve(''), 4000))
+            // const promise = new Promise((resolve) => setTimeout(() => resolve(''), 4000))
             router.replace('/sign-in')
         }
         setLoading(false)

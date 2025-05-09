@@ -3,20 +3,10 @@ import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useState } from 'react'
-import { LuCircleUser } from 'react-icons/lu'
 import { MdOutlineSubscriptions } from 'react-icons/md'
 import { RiDashboardHorizontalLine } from 'react-icons/ri'
-import { IoIosLogOut } from "react-icons/io";
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarTrigger, useSidebar } from "@/components/sidebar"
 import LogoutModal from '../(auth)/LogoutModal'
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogHeader,
-    DialogTitle,
-    DialogTrigger,
-} from "@/components/ui/dialog"
 import { LogOut } from 'lucide-react'
 import { IoWalletOutline } from 'react-icons/io5'
 import { useIsMobile } from '@/hooks/use-mobile'

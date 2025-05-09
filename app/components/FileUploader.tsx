@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { Controller } from 'react-hook-form'
 import toast from 'react-hot-toast'
 
-const FileUploader = ({ register, id, error, validation, control }: { register: any, id: string, error?: string, validation?: object, control: any }) => {
+const FileUploader = ({ id, error, validation, control }: { register: any, id: string, error?: string, validation?: object, control: any }) => {
     const [previewImage, setPreviewImage] = useState<string | null>(null);
     const onFileChange = async (e: React.ChangeEvent<HTMLInputElement>, field: any) => {
         console.log(e.target.files?.[0])

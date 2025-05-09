@@ -5,7 +5,6 @@ import {
     DialogDescription,
     DialogHeader,
     DialogTitle,
-    DialogTrigger,
 } from "@/components/ui/dialog"
 import { DialogClose } from '@radix-ui/react-dialog'
 import { useRouter } from 'next/navigation'

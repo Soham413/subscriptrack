@@ -1,10 +1,9 @@
 import { getUserDetails } from "@/lib/fetchUser";
 import { RootState } from "@/store/store";
 import { setUserInfo } from "@/store/userSlice";
-import { Bell, CircleUserRound, LogOut } from "lucide-react";
+import { LogOut } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
-import { IoNotifications } from "react-icons/io5";
 import defaultUserLogo from "@/public/user-logo-default.png"
 import { LuCircleUser } from "react-icons/lu";
 import { useDispatch, useSelector } from "react-redux";

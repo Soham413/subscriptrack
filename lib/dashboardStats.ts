@@ -32,7 +32,7 @@ export const getDashboardStats = (subscriptions: subscriptionResponseType[]) => 
     
     const renewal = parseISO(sub.renewalDate)
     // console.log(renewal);
-    const daysLeft = differenceInDays(renewal, today)
+    const daysLeft = Math.ceil((new Date(renewal).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24))
     // console.log(daysLeft);
     
     if (daysLeft >= 0 && daysLeft <= 7) {

@@ -1,18 +1,18 @@
-export type subscriptionType = {
-    createdAt: Date;
-    updatedAt: Date;
-} & {
-    name: string;
-    price: number;
-    currency: "USD" | "EUR" | "GBP" | "INR";
-    category: string;
-    frequency: string;
-    paymentMethod: string;
-    status: string;
-    startDate: Date;
-    renewalDate: Date;
-    user?: any;
-}
+// export type subscriptionType = {
+//     createdAt: Date;
+//     updatedAt: Date;
+// } & {
+//     name: string;
+//     price: number;
+//     currency: "USD" | "EUR" | "GBP" | "INR";
+//     category: string;
+//     frequency: string;
+//     paymentMethod: string;
+//     status: string;
+//     startDate: Date;
+//     renewalDate: Date;
+//     user?: any;
+// }
 
 export type subscriptionResponseType = {
     daysLeft?: number;
@@ -59,11 +59,11 @@ export type selectOptionType = {
     value: string;
 }[]
 
-export type HeaderType = {
-    headers: {
-        "Content-Type": string,
-    }
-}
+// export type HeaderType = {
+//     headers: {
+//         "Content-Type": string,
+//     }
+// }
 
 export type paymentResponseType = {
   _id: string;

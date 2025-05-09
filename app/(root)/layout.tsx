@@ -1,24 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+// import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "@/app/globals.css";
-import Navbar from "../../components/Navbar";
 import AppSidebar from "../components/AppSidebar";
-import { SidebarProvider, SidebarTrigger } from "@/components/sidebar";
-import { cn } from "@/lib/utils";
+import { SidebarProvider } from "@/components/sidebar";
 import PageWrapper from "./PageWrapper";
 import { Toaster } from "react-hot-toast";
 import StoreProvider from "@/store/StoreProvider";
 import NextTopLoader from "nextjs-toploader"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 

@@ -1,5 +1,4 @@
 'use client'
-import SelectDropdown from '@/app/components/SelectDropdown'
 import { subsCategory, subsFrequency } from '@/lib/dummyData'
 import {
     Select,
@@ -8,7 +7,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
-import React, { useState } from 'react'
+import React from 'react'
 import { LayoutGrid, TableProperties } from 'lucide-react'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '@/store/store'
