@@ -10,6 +10,7 @@ import toast from 'react-hot-toast'
 import { useDispatch, useSelector } from 'react-redux'
 import PaymentList from './PaymentList'
 import { resetCategory, resetFrequency, resetSearchKeyword } from '@/store/subscriptionSlice'
+import { getUserSubscriptions } from '@/lib/fetchSubscription'
 
 
 const page = () => {
@@ -25,7 +26,16 @@ const page = () => {
     const fetchPaymentHistory = async () => {
       try {
         setLoading(true)
-        const { upcomingRenewals } = getDashboardStats(subscriptionList)
+        const user = JSON.parse(localStorage.getItem('user') || '')
+        console.log(user._id);
+        const allSubscriptions = await getUserSubscriptions(user._id || '')
+        console.log(allSubscriptions);
+        if (!allSubscriptions.success) {
+          toast.error(allSubscriptions.message || 'Something went wrong')
+          console.log(allSubscriptions.message); 
+          return
+        }
+        const { upcomingRenewals } = getDashboardStats(allSubscriptions.data)
         console.log('upcomingRenewals', upcomingRenewals);
         setUpcomingRenewalsubs(upcomingRenewals)
         const payments = await getAllPayments()
@@ -47,7 +57,7 @@ const page = () => {
     <div>
       {loading && <Spinner color='#222eff' wrapperClass='h-screen w-full' />}
       {upcomingRenewalsubs.length > 0 && <><p className='font-semibold text-xl my-3'>Upcoming renewal plans</p>
-        <div className="w-full flex gap-3">
+        <div className="w-full flex gap-3 mb-4">
           {upcomingRenewalsubs.map((item, i) => (
             <RenewCard key={i} classes='p-4 w-1/3' title={item.name} price={item.price} daysLeft={item.daysLeft || 0} logo={item.subLogo} />
           ))}
